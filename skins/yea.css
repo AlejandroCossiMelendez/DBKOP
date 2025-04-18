@@ -1,0 +1,257 @@
+body {
+	text-align: center;
+	background:#5B6162 url(images/tloo.png) repeat;
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+#podstawa{
+	width:707px;
+	height:256px;
+	margin:auto;
+
+}
+
+#topmen{
+	height:71px;
+	width:124px;
+	margin:auto;
+
+}
+
+.google{
+	padding-top: 5px;
+	text-align:center;
+	padding-bottom: 5px;
+}
+
+.logo{
+	background:url(images/logo.gif);
+	height:256px;
+	width:707px;
+}
+
+.menutop{
+	background:url(images/topmenu.png) repeat-x;
+	margin:0px 0px 0px 0px;
+	padding:17px 0px 0px 0px;
+	height:71px;
+	text-align:center;
+	color:#ffffff;
+	font-size:11px;
+}
+.menutop a{
+	color:#2a2a2a;
+	padding:0px 16px 0px 16px;
+	text-decoration:none;
+}	
+.menutop a:hover{
+	color:#fff;
+
+
+}
+
+.menulogo{
+background:url(images/menupod.png) repeat-x;
+margin:0px 0px 0px 0px;
+padding:35px 0px 23px 0px;
+text-align:center;
+font-size:13px;
+
+}
+.menulogo a{
+display:inline;
+background:url(images/linkgorny.png) no-repeat;
+color:#afafaf;
+padding:0px 16px 0px 16px;
+text-decoration:none;
+margin-right:0px;
+}	
+.menulogo a:hover{
+	color:#fff;
+
+}
+
+.reklama{
+	
+	background:url(images/reklama.gif) no-repeat;
+
+	text-align:center;
+	padding:10px 1px 14px 1px;
+	margin:0px 0px 0px 0px;
+	width:582px;
+	float:center;
+	font-size:10px;
+	color:#ffffff;
+}
+
+.newsman{
+	
+	background:url(images/nius.png) no-repeat;
+	height:23px;
+	padding:22px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	float:center;
+	color:#ffffff;
+}
+.newsmann{
+	
+	background:url(images/nius2.png) no-repeat;
+	height:21px;
+	width:472px;
+	padding:3px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	float:center;
+	color:#ffffff;
+}
+	
+.reklama a{
+	display:inline;
+	text-decoration:none;
+	background-position:0px 9px;
+	padding:5px 10px 500px 12px
+	margin-right:12px;
+	padding-left:20px;
+	font-weight:bold;
+	min-height:120px;
+}
+.reklama a:hover{
+	background-position:0px 9px;
+	text-decoration:underline;
+	font-weight:bold;
+	min-height:120px;
+}
+#menu{
+	width:207px;
+	float:left;
+}
+.srodek{
+	background: url(images/tlolewe.jpg);
+}
+.tekst{
+	padding:5px 20px;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+}
+
+.marginleft{
+	margin-left:130px;
+}
+
+.marginleft20{
+	margin-left:30px;
+}
+
+.marginleft2{
+	margin-left:60px;
+}
+
+.tekstcen{
+	text-align:center;
+}
+
+.tekstacc{
+	font-size:20px;
+	color:#ffffff;
+	text-align:center;
+}
+
+.tekstlog{
+	font-size:20px;
+	color:#ffffff;
+}
+
+
+.tekstgreen{
+	font-size:20px;
+	color:#a0d337;
+	text-align:center;
+}
+
+.tekstgreen2{
+	font-size:16px;
+	color:#a0d337;
+	text-align:center;
+}
+
+.bullet {
+	background: url(images/bullet.gif) no-repeat;
+}
+
+.tekst a{
+display:inline;
+background:url(images/linkgorny.png) no-repeat;
+color:#afafaf;
+padding:0px 16px 0px 16px;
+text-decoration:none;
+margin-right:0px;
+}	
+.tekst a:hover{
+	color:#fff;
+}
+
+.srodekniusa{
+	background: url(images/niustlo.png);
+}
+#nius{
+	width:500px;
+	float:right;
+	margin-right:0px;
+}
+.newmenu{
+	
+	background:url(images/menu.png) no-repeat;
+	height:45px;
+}
+.newmenuu{
+	
+	background:url(images/menu4.png) no-repeat;
+	height:21px;
+}
+.newmenuuu{
+	
+	background:url(images/menu3.png) no-repeat;
+	height:21px;
+}
+.menutopp{
+	background:url(images/dul.png) repeat-x;
+	margin:0px 0px 0px 0px;
+	padding:10px 45px 0px 0px;
+	height:45px;
+	text-align:right;
+	color:#ffffff;
+	font-size:11px;
+}
+.menutopp a{
+display:inline;
+color:#afafaf;
+text-decoration:none;
+margin-right:0px;
+}
+.menutopp a:hover{
+	color:#fff;
+}
+
+
+.teksts{
+	padding:5px 20px;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+}
+
+.teksts a{
+display:inline;
+color:#afafaf;
+text-decoration:none;
+margin-right:0px;
+}	
+.teksts a:hover{
+	color:#fff;
+}
+.uwaga{
+	font-size:15px;
+	color:red
+}

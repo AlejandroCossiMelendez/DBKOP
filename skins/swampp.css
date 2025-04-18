@@ -1,0 +1,517 @@
+/*
+    Copyright (C) 2007  Nicaw
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+  
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #000;
+	background-image: url('skins/fondo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+	background-position: center center; /* Centra la imagen */
+	background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+	color: #ffffff; /* Texto blanco para mejor contraste */
+	margin: 0;
+	padding: 0;
+	min-height: 100vh; /* Asegura que el body cubra al menos toda la altura de la ventana */
+	color: rgb(0, 0, 0);
+	padding-left: 20%;
+	display: flex;
+	flex-direction: column;
+}
+.bb-container {
+    font-family: "Verdana", sans-serif;
+    font-size: 14px;
+    background-color: #5A5A5A; /* Fondo coherente con .top */
+    border: 2px solid #444441;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000aa;
+    color: #eee;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    position: relative;
+}
+
+/* Emojis estilo Dragon Ball */
+.bb-container::before {
+    content: "🌟🟠 Notícias DBKOP 🟠🌟";
+    position: absolute;
+    top: -18px;
+    left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #696864;
+    background: #2b2b2b;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.bb-container b {
+    color: #ffc107;
+}
+
+
+.bb-container [style*="color:blue"] {
+    color: #51b5ff !important;
+    font-weight: bold;
+}
+
+.bb-container a {
+    color: #00d9ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bb-container a:hover {
+    color: #00f0ff;
+    text-shadow: 0 0 5px #00f0ff;
+}
+
+
+img {
+	border: 0;
+}
+a {
+	color: black;
+}
+h2 {
+ 	background-image: url(skins/swamp/splash.gif);
+	background-repeat: no-repeat;
+	font: normal normal 1.5em "Georgia",serif;
+    text-decoration: none;
+	height: 40px;
+	padding-left: 25px;
+}
+legend {
+	color: rgb(255, 255, 255);
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+    font-size: 20px;
+	
+}
+a:hover{
+	font-weight: normal;
+	color: gray;
+}
+.color0 {
+	background-color: #6e8d67;
+	color: white;
+}
+.color1 {
+	background-color: #c0d6bb;
+}
+.color2 {
+	background-color: #b2e0a9;
+}
+.top {
+	color: rgb(255, 255, 255);
+	margin-top: 18px;
+}
+.online {
+	color: #51850d;
+	font-weight: bold;
+}
+.offline {
+	font-weight: bold;
+}
+.rowselect {
+	cursor: pointer;
+}
+.rowselect:hover {
+	background-color: #fcecbf;
+}
+.task-menu{
+	cursor: pointer;
+}
+.task-menu li{
+	list-style-type: none;
+	height: 16px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-bottom: 5px;
+}
+.task-menu li:hover {
+	background-color: rgb(161,209,134);
+}
+#container {
+	width: 800px;
+	flex:1;
+}
+
+#footer {
+
+    background-color: #5A5A5A; /* Fondo coherente con .top */
+	border-top: 3px solid #ffcc00;
+	padding: 10px 20px;
+	color: #000000;
+	font-family: 'Arial', sans-serif;
+	font-size: 13px;
+	text-align: center;
+	max-width: 760px;
+	position: relative;
+	margin-top: 10px;
+	font-weight: bold;
+  }
+  
+  .footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 600px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+  }
+  
+  .footer-text {
+	flex: 1;
+	text-align: left;
+  }
+  
+  .footer-whatsapp {
+	flex: 0;
+  }
+  
+  .whatsapp-icon {
+	width: 28px;
+	height: 28px;
+	filter: brightness(1.2);
+	transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-icon:hover {
+	transform: scale(1.1);
+  }
+  .footer-instagram {
+	flex: 0;
+	margin-left: 10px; /* Espacio entre los íconos */
+  }
+  
+  .instagram-icon {
+	width: 28px;
+	height: 28px;
+	filter: brightness(1.2);
+	transition: transform 0.3s ease;
+  }
+  
+  .instagram-icon:hover {
+	transform: scale(1.1);
+  }
+  
+#header {
+	background-image: url(skins/swamp/header.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	width: 800px;
+	height: 180px;
+}
+#server_name {
+	display: none;
+}
+#panel {
+	position: absolute;
+	margin-top: 150px;
+}	
+#panel li:hover {
+	background-color: #240f35;
+	box-shadow: 0 0 5px #ffffff, 0 0 10px #aaa9b3;
+	transition: all 0.2s ease-in-out;
+}
+
+#panel .top {
+	background: linear-gradient(to right, #000, #222);
+    border-radius: 5px 5px 0px 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	width: 168px;
+	margin-left: 2px;
+    height: 25px;
+    padding-top: 5px;
+	color: #ffffff;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 0 5px #c4c1b8;
+}
+
+#panel li {
+    background-color: #5A5A5A; /* Fondo coherente con .top */
+	border: 1px solid #000;
+    padding-left: 20px;
+	margin-left: 2px;
+    list-style-type: none;
+    height: 23px;
+	width: 147px;
+    background-repeat: no-repeat;
+}
+
+#panel .bot {
+    border-radius: 0px 0px 5px 5px;
+	background: linear-gradient(to right, #000, #222);
+    border-left: 1px solid #000; /* Borde izquierdo */
+    border-right: 1px solid #000; /* Borde derecho */
+    border-bottom: 1px solid #000; /* Borde inferior */
+	height: 20px;
+  	width: 168px;
+    margin: 0;
+    padding: 0;
+	margin-left: 2px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-align: center;
+	border-bottom: 1px solid #333;	
+	box-shadow: inset 0 0 5px #c4c1b8;
+}
+
+#panel .mid {
+	background-image: url(skins/swamp/mid.gif);
+	background-repeat: repeat-y;
+	text-align: center;
+	padding: 10px;
+	width: 154px;
+}
+#navigation ul {
+	width: 600px;
+	padding: 0;
+	margin: 0;
+}
+
+#panel a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+#panel a:hover {
+	font-weight: bold;
+}
+#status .top {
+	background: linear-gradient(to right, #000, #222);
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 15px;
+	width: 168px;
+	margin-left: 2px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 0 5px #c4c1b8;
+  }
+
+  
+#status .mid {
+	padding: 15px;
+	text-align: center;
+  }
+  
+#server_state {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+#server_state span.online {
+	color: #ffcc00;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#server_state span.offline {
+  color: red;
+  font-weight: bold;
+  text-shadow: 0 0 3px red;
+}
+
+#server_state span.players,
+#server_state span.uptime {
+  color: #2e2e2e;
+  text-shadow: 0 0 3px #000000;
+}
+
+#server_state b {
+  color: #ff0000;
+  text-shadow: 0 0 3px #c52525;
+}
+
+#status .bot {
+	background: linear-gradient(to right, #000, #222);
+	font-weight: bold;
+  	height: 20px;
+	width: 168px;
+	margin-left: 2px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-align: center;
+	border-bottom: 1px solid #333;	
+	box-shadow: inset 0 0 5px #c4c1b8;
+}
+#content {
+	margin-left: 174px;
+	margin-top: 150px;
+    border-radius: 10px;  flex: 1;  min-height: 540px; /* O la altura mínima que prefieras */
+    z-index: 1;
+}
+#content .top {
+	font-size: 1em;
+	color: #fff;
+	background: linear-gradient(to right, #000, #222);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+    border-radius: 5px 5px 0px 0px;
+	width: 622px;
+	height: 25px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	text-align: center;
+	box-shadow: inset 0 0 5px #c4c1b8;
+	margin-left: 2px;
+}
+#content .mid {    
+	background-color: #5A5A5A; /* Fondo coherente con .top */
+	margin-left: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 582px;
+	min-height: 200px;
+}
+#content .bot {
+	background: linear-gradient(to right, #000, #222);
+	
+	width: 622px;
+  	height: 20px;
+	margin-left: 2px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom: 1px solid #333;	
+	box-shadow: inset 0 0 5px #c4c1b8;
+}
+#error {
+	background-image: url(skins/swamp/error.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: bold;
+	width: 175px;
+	height: 70px;
+	padding-left: 60px;
+	padding-right: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 240px;
+	margin-top: 100px;
+	cursor: pointer;
+}
+#captcha-image {
+	margin-top: 5px;
+}
+#account-image {
+	background-image: url(skins/swamp/swamp_monster.gif);
+	background-repeat: no-repeat;
+	padding-right: 50px;
+	width: 190px;
+	height: 160px;
+	float: right;
+}
+#choose-skill {
+	float: left;
+	margin-right: 20px;
+}
+#form #iobox {
+    z-index: 10;
+    position: fixed;
+    background-color: #5A5A5A; /* Fondo coherente con .top */
+    color: #fff;
+    border: 2px solid #000000; /* Un borde naranja al estilo DBZ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    width: 300px; /* Un tamaño más adecuado */
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form #iobox fieldset {
+    cursor: default;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#form input[type="text"], #form input[type="password"], #form select {
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+#form input[type="text"]:focus, #form input[type="password"]:focus, #form select:focus {
+    border-color: #ffffff; /* Un toque dorado al enfocar */
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+}
+
+#form button {
+    background-color: #FF6347; /* Botones naranjas como DBZ */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#form button:hover {
+    background-color: #f8f8f8; /* Cambio a dorado al pasar el mouse */
+    color: #333;
+}
+
+#form button:active {
+    background-color: #ffffff; /* Efecto al hacer click */
+}
+.iobox label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.iobox input {
+    display: block;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 300px;
+}

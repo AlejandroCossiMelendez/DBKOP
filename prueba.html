@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ruleta de la Suerte</title>
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    canvas {
+      background: #fff;
+      border-radius: 50%;
+      border: 10px solid gold;
+      box-shadow: 0 0 20px #f39c12;
+    }
+
+    .puntero {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 30px solid red; /* Cambiado a border-top para apuntar hacia abajo */
+      margin: 20px auto 0 auto; /* Ajuste de margen para posicionar debajo de la ruleta */
+    }
+
+    button {
+      background: gold;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px orange;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="puntero"></div> <!-- Puntero ahora debajo de la ruleta -->
+
+  <canvas id="ruleta" width="400" height="400"></canvas>
+  <br>
+  <button onclick="girarRuleta()">🎯 Girar Ruleta</button>
+
+  <script>
+    const canvas = document.getElementById("ruleta");
+    const ctx = canvas.getContext("2d");
+    const premios = ["Premio 1", "Premio 2", "Premio 3", "Premio 4", "Premio 5", "Premio 6"];
+    const colores = ["#e74c3c", "#f1c40f", "#2ecc71", "#3498db", "#9b59b6", "#e67e22"];
+    const numPremios = premios.length;
+    const angulo = 2 * Math.PI / numPremios;
+    let rotacion = 0;
+    let girando = false;
+
+    function dibujarRuleta() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < numPremios; i++) {
+        const start = i * angulo;
+        const end = start + angulo;
+
+        ctx.beginPath();
+        ctx.moveTo(200, 200);
+        ctx.arc(200, 200, 200, start, end);
+        ctx.fillStyle = colores[i % colores.length];
+        ctx.fill();
+        ctx.save();
+
+        // Texto
+        ctx.translate(200, 200);
+        ctx.rotate(start + angulo / 2);
+        ctx.textAlign = "right";
+        ctx.fillStyle = "white";
+        ctx.font = "16px Arial";
+        ctx.fillText(premios[i], 180, 10);
+        ctx.restore();
+      }
+    }
+
+    dibujarRuleta();
+
+    function girarRuleta() {
+      if (girando) return;
+      girando = true;
+
+      const vueltas = Math.floor(Math.random() * 3 + 5); // 5-7 vueltas
+      const gradosExtra = Math.floor(Math.random() * 360);
+      const totalGrados = vueltas * 360 + gradosExtra;
+      const radianesTotales = totalGrados * Math.PI / 180;
+
+      const duracion = 5000;
+      const start = performance.now();
+
+      function animar(now) {
+        const tiempo = now - start;
+        const progreso = Math.min(tiempo / duracion, 1);
+        const easeOut = 1 - Math.pow(1 - progreso, 3);
+
+        rotacion = radianesTotales * easeOut;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.save();
+        ctx.translate(200, 200);
+        ctx.rotate(rotacion);
+        ctx.translate(-200, -200);
+        dibujarRuleta();
+        ctx.restore();
+
+        if (progreso < 1) {
+          requestAnimationFrame(animar);
+        } else {
+          // Cálculo correcto del premio con puntero abajo
+          const anguloFinal = rotacion % (2 * Math.PI);
+          // Ajuste para que el premio ganado sea el que está justo encima del puntero (abajo)
+          const anguloAjustado = (2 * Math.PI - anguloFinal - Math.PI / 2) % (2 * Math.PI);
+          const index = Math.floor(anguloAjustado / angulo) % numPremios;
+          const premioGanado = premios[index];
+
+          // Verificar que el premio no sea undefined
+          if (premioGanado) {
+            alert(`🎉 ¡Ganaste: ${premioGanado}!`);
+          } else {
+            alert("Hubo un error al determinar el premio. Inténtalo de nuevo.");
+          }
+
+          girando = false;
+        }
+      }
+
+      requestAnimationFrame(animar);
+    }
+  </script>
+</body>
+</html>

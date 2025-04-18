@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Author" content="nicaw" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Ce</title>
+<style type="text/css">
+body{
+	background-color: white;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.task-menu{
+	cursor: pointer;
+}
+.task-menu li{
+	list-style-type: none;
+	height: 16px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-bottom: 5px;
+}
+.task-menu li:hover {
+	background-color: #e2e2e2;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+</style>
+</head>
+<body>
+<div style="background-image: url(ico/nicaw_logo.png); height: 151px; width: 400px;"></div>
+<ul class="task-menu" style="margin: 10px">
+<!--<li onclick="self.location.href='porttest.php'" style=" background-image: url(ico/disconnect.png);">Check Ports</li>-->
+<li style=" background-image: url(ico/house.png);"><a target="_parent" href="http://nicaw.net/">Visit homepage</a></li>
+<li style=" background-image: url(ico/bug.png);"><a href="bug_report.php">Report a bug</a></li>
+<div align="center" style="position: relative; top: -50px;"><marquee direction="left" behavior="scroll" scroll="continuous" scrollamount="2" width="700" height="20"><?include('marquee.txt');?></marquee></div>
+<li style=" background-image: url(ico/server_key.png);"><a target="_parent" href="http://localhost/security">XAMPP security</a></li>
+<li style=" background-image: url(ico/wrench_orange.png);"><a target="_parent" href="http://localhost/phpmyadmin">PHPMyAdmin</a></li>
+
+</ul>
+</body>
+
+</html>

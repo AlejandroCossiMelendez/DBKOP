@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+<category name="Techniki">
+<item href="goku.php">Goku</item>
+<item href="vegeta.php">Vegeta</item>
+<item href="vegetto.php">Vegetto</item>
+<item href="gohan.php">Gohan</item>
+<item href="trunks.php">Trunks</item>
+<item href="chibi trunks.php">Chibi Trunks</item>
+<item href="goten.php">Goten</item>
+<item href="freeza.php">Freeza</item>
+<item href="buu.php">Buu</item>
+<item href="cell.php">Cell</item>
+<item href="cooler.php">Cooler</item>
+<item href="piccolo.php">Piccolo</item>
+<item href="bebi.php">Bebi</item>
+<item href="brolly.php">Brolly</item>
+<item href="bardock.php">Bardock</item>
+<item href="dende.php">Dende</item>
+<item href="uub.php">Uub</item>
+<item href="tenshin.php">Tenshin</item>
+<item href="kuririn.php">Kuririn</item>
+<item href="videl.php">Videl</item>
+<item href="Pan.php">Pan</item>
+<item href="Shin.php">Shin</item>
+<item href="janemba.php">Janemba</item>
+<item href="androidc17.php">Android c17</item>
+<item href="androidc18.php">Android c18</item>
+</category>
+
+</navigation>

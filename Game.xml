@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+<category name="Game">
+<item href="Enchanting.php">Enchanting</item>
+<item href="news.php">Dragon Ball</item>
+<item href="account.php">Reborn</item>
+<item href="download.php">Special Comands</item>
+<item href="characters.php">Quests</item>
+<item href="guilds.php">Npc Quests/item>
+<item href="bans.php">Buff</item>
+</category>
+
+</navigation>

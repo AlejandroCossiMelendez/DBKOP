@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+<category name="Navigation">
+<item href="notes.php">Home</item>
+<item href="news.php">News</item>
+<item href="account.php">Account</item>
+<item href="download.php">Download</item>
+<item href="ranks.php?sort=level">Highscores</item>
+<item href="characters.php">Characters</item>
+<item href="guilds.php">Guilds</item>
+<item href="bans.php">Bans</item>
+<item href="items.php">Items</item>
+<item href="buy_points.php">Shop Points</item>
+<item href="shop.php">Shop Items</item>
+</category>
+
+</navigation>

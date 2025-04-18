@@ -1,0 +1,336 @@
+colokar no index.php no meu do <head> Script <head>
+
+Meteoros girando em volta do cursor
+
+<script LANGUAGE="JavaScript">
+<!-- 
+
+//Choose colours and size of effect !!
+var a_Colour='ffffff';
+var b_Colour='8c9bff';
+var c_Colour='4a61ff';
+var Size=80;
+//Alter nothing below !!
+
+var YDummy=new Array(),XDummy=new Array(),xpos=0,ypos=0,ThisStep=0;step=0.6;
+if (document.layers){
+window.captureEvents(Event.MOUSEMOVE);
+function nsMouse(evnt){
+xpos = window.pageYOffset+evnt.pageX+6;
+ypos = window.pageYOffset+evnt.pageY+16;
+}
+window.onMouseMove = nsMouse;
+}
+else if (document.all)
+{
+function ieMouse(){
+xpos = document.body.scrollLeft+event.x+6;
+ypos = document.body.scrollTop+event.y+16;
+}
+document.onmousemove = ieMouse;
+}
+
+function swirl(){
+for (i = 0; i < 3; i++)
+ { 
+ YDummy[i]=ypos+Size*Math.sin((1*Math.sin((ThisStep)/10))+i*2)*Math.sin((ThisStep)/4);
+ XDummy[i]=xpos+Size*Math.cos((1*Math.sin((ThisStep)/10))+i*2)*Math.sin((ThisStep)/4);
+ }
+ThisStep+=step;
+setTimeout('swirl()',10);
+}
+
+var amount=10;
+if (document.layers){
+for (i = 0; i < amount; i++)
+{
+document.write('<layer name=nsa'+i+' top=0 left=0 width='+i/2+' height='+i/2+' bgcolor='+a_Colour+'></layer>');
+document.write('<layer name=nsb'+i+' top=0 left=0 width='+i/2+' height='+i/2+' bgcolor='+b_Colour+'></layer>');
+document.write('<layer name=nsc'+i+' top=0 left=0 width='+i/2+' height='+i/2+' bgcolor='+c_Colour+'></layer>');
+}
+}
+else if (document.all){
+document.write('<div id="ODiv" style="position:absolute;top:0px;left:0px">'
++'<div id="IDiv" style="position:relative">');
+for (i = 0; i < amount; i++)
+{
+document.write('<div id=x style="position:absolute;top:0px;left:0px;width:'+i/2+';height:'+i/2+';background:'+a_Colour+';font-size:'+i/2+'"></div>');
+document.write('<div id=y style="position:absolute;top:0px;left:0px;width:'+i/2+';height:'+i/2+';background:'+b_Colour+';font-size:'+i/2+'"></div>');
+document.write('<div id=z style="position:absolute;top:0px;left:0px;width:'+i/2+';height:'+i/2+';background:'+c_Colour+';font-size:'+i/2+'"></div>');
+}
+document.write('</div></div>');
+}
+function prepos(){
+var ntscp=document.layers;
+var msie=document.all;
+if (document.layers){
+for (i = 0; i < amount; i++)
+{
+ if (i < amount-1) 
+ {
+ ntscp['nsa'+i].top=ntscp['nsa'+(i+1)].top;ntscp['nsa'+i].left=ntscp['nsa'+(i+1)].left;
+ ntscp['nsb'+i].top=ntscp['nsb'+(i+1)].top;ntscp['nsb'+i].left=ntscp['nsb'+(i+1)].left;
+ ntscp['nsc'+i].top=ntscp['nsc'+(i+1)].top;ntscp['nsc'+i].left=ntscp['nsc'+(i+1)].left;
+ } 
+else  
+ {
+ ntscp['nsa'+i].top=YDummy[0];ntscp['nsa'+i].left=XDummy[0];
+ ntscp['nsb'+i].top=YDummy[1];ntscp['nsb'+i].left=XDummy[1];
+ ntscp['nsc'+i].top=YDummy[2];ntscp['nsc'+i].left=XDummy[2];
+ }
+}
+}
+else if (document.all){
+for (i = 0; i <  amount; i++)
+{
+ if (i < amount-1) 
+ {
+ msie.x[i].style.top=msie.x[i+1].style.top;msie.x[i].style.left=msie.x[i+1].style.left;
+ msie.y[i].style.top=msie.y[i+1].style.top;msie.y[i].style.left=msie.y[i+1].style.left;
+ msie.z[i].style.top=msie.z[i+1].style.top;msie.z[i].style.left=msie.z[i+1].style.left;
+ } 
+else 
+ {
+ msie.x[i].style.top=YDummy[0];msie.x[i].style.left=XDummy[0];
+ msie.y[i].style.top=YDummy[1];msie.y[i].style.left=XDummy[1];
+ msie.z[i].style.top=YDummy[2];msie.z[i].style.left=XDummy[2];
+ }
+}
+}
+setTimeout("prepos()",10);
+}
+function Start(){
+swirl(),prepos()
+}
+window.onload=Start;
+// -->
+</SCRIPT>
+
+
+
+
+Título rotativo
+
+<script language=JavaScript>
+
+<!--
+
+<!--
+
+var txt="COLOQUE O TÍTULO DO BLOG AQUI";
+
+var espera=200;
+
+var refresco=null;
+
+
+
+function rotulo_title() {
+
+        document.title=txt;
+
+        txt=txt.substring(1,txt.length)+txt.charAt(0);        
+
+        refresco=setTimeout("rotulo_title()",espera);}
+
+rotulo_title();
+
+// -->
+
+
+
+function MM_displayStatusMsg(msgStr) { //v1.0
+
+  status=msgStr;
+
+  document.MM_returnValue = true;
+
+}
+
+
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+
+  window.open(theURL,winName,features);
+
+}
+
+//-->
+
+</script>
+
+
+
+Efeito de chuva na tela
+
+<script language=JavaScript>
+<!-- Original: Matthew Musgrove ( muskrat@lvnworth.com) -->
+<!-- Web Site: http://free.prohosting.com/~musgrove -->
+
+<!-- This script and many more are available free online at -->
+<!-- Javafile.com http://www.javafile.com -->
+
+<!-- Begin
+var no = 50;
+var speed = 1;
+var ns4up = (document.layers) ? 1 : 0;
+var ie4up = (document.all) ? 1 : 0;
+var s, x, y, sn, cs;
+var a, r, cx, cy;
+var i, doc_width = 800, doc_height = 600;
+if (ns4up) {
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+else
+if (ie4up) {
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+x = new Array();
+y = new Array();
+r = new Array();
+cx = new Array();
+cy = new Array();
+s = 8;
+for (i = 0; i < no; ++ i) { 
+initRain();
+if (ns4up) {
+if (i == 0) {
+document.write("<layer name=\"dot"+ i +"\" left=\"1\" ");
+document.write("top=\"1\" visibility=\"show\"><font color=\"white\">");
+document.write(",</font></layer>");
+}
+else {
+document.write("<layer name=\"dot"+ i +"\" left=\"1\" ");
+document.write("top=\"1\" visibility=\"show\"><font color=\"white\">");
+document.write(",</font></layer>");
+}
+}
+else 
+if (ie4up) {
+if (i == 0) {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><font color=\"white\">");
+document.write(",</font></div>");
+}
+else {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><font color=\"white\">");
+document.write(",</font></div>");
+}
+}
+}
+function initRain() {
+a = 6;
+r[i] = 1;
+sn = Math.sin(a);
+cs = Math.cos(a);
+cx[i] = Math.random() * doc_width + 1;
+cy[i] = Math.random() * doc_height + 1;
+x[i] = r[i] * sn + cx[i];
+y[i] = cy[i];
+}
+function makeRain() {
+r[i] = 1;
+cx[i] = Math.random() * doc_width + 1;
+cy[i] = 1;
+x[i] = r[i] * sn + cx[i];
+y[i] = r[i] * cs + cy[i];
+}
+function updateRain() {
+r[i] += s;
+x[i] = r[i] * sn + cx[i];
+y[i] = r[i] * cs + cy[i];
+}
+function raindropNS() {
+for (i = 0; i < no; ++ i) {
+updateRain();
+if ((x[i] <= 1) || (x[i] >= (doc_width - 20)) || (y[i] >= (doc_height - 20))) {
+makeRain();
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+document.layers["dot"+i].top = y[i];
+document.layers["dot"+i].left = x[i];
+}
+setTimeout("raindropNS()", speed);
+}
+function raindropIE() {
+for (i = 0; i < no; ++ i) {
+updateRain();
+if ((x[i] <= 1) || (x[i] >= (doc_width - 20)) || (y[i] >= (doc_height - 20))) {
+makeRain();
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+document.all["dot"+i].style.pixelTop = y[i];
+document.all["dot"+i].style.pixelLeft = x[i];
+}
+setTimeout("raindropIE()", speed);
+}
+if (ns4up) {
+raindropNS();
+}
+else
+if (ie4up) {
+raindropIE();
+}
+// End -->
+</SCRIPT>
+
+
+
+Texto com efeito 2
+
+<script language=JavaScript> 
+  
+<!-- Begin
+text = "Seu texto aqui"; // The text to scroll
+color1 = "#5c6390"; // original text color
+color2 = "#ffffff"; // new character color
+fontsize = "6"; // font size of text
+speed =" 98 "; // how fast to rotate to next character
+// time is in milliseconds, (i.e. 1000 = 1 second) 
+  
+i = 0;
+if (navigator.appName == "Netscape") {
+document.write("<layer id=a visibility=show></layer><br><br><br>");
+}
+else {
+document.write("<div id=a></div>");
+}
+function changeCharColor() {
+if (navigator.appName == "Netscape") {
+document.a.document.write("<center><font size =" + fontsize + "><font color=" + color1 + ">");
+for (var j = 0; j < text.length; j++) {
+if(j == i) {
+document.a.document.write("<font color=" + color2 + ">" + text.charAt(i) + "</font>");
+}
+else {
+document.a.document.write(text.charAt(j));
+}
+}
+document.a.document.write('</font></font></center>');
+document.a.document.close();
+}
+if (navigator.appName == "Microsoft Internet Explorer") {
+str = "<center><font size=" + fontsize + "><font color=" + color1 + ">";
+for (var j = 0; j < text.length; j++) {
+if( j == i) {
+str += "<font color=" + color2 + ">" + text.charAt(i) + "</font>";
+}
+else {
+str += text.charAt(j);
+}
+}
+str += "</font></font></center>";
+a.innerHTML = str;
+}
+(i == text.length) ? i=0 : i++; // reset after going through all letters
+}
+setInterval("changeCharColor()", speed);
+// End -->
+</SCRIPT>
