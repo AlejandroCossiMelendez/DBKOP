@@ -19,7 +19,7 @@ $cfg['house_file'] = 'world/Tibia-house.xml';
 $cfg['SQL_Server'] = 'localhost';
 $cfg['SQL_User'] = 'root';
 $cfg['SQL_Password'] = '';
-$cfg['SQL_Database'] = 'dbko';
+$cfg['SQL_Database'] = 'dbkop';
 
 # Must correspond to your OTServ configuration
 # Options: plain, md5, sha1
