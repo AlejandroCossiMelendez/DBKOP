@@ -16,10 +16,10 @@ $cfg['dirdata'] = 'C:\Users\usuario\Desktop\Sena\dbko';
 $cfg['house_file'] = 'world/Tibia-house.xml';
 
 # MySQL server settings
-$cfg['SQL_Server'] = '193.203.175.83';
+$cfg['SQL_Server'] = 'localhost';
 $cfg['SQL_User'] = 'root';
 $cfg['SQL_Password'] = '';
-$cfg['SQL_Database'] = 'dbko_test';
+$cfg['SQL_Database'] = 'dbko';
 
 # Must correspond to your OTServ configuration
 # Options: plain, md5, sha1
@@ -287,6 +287,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][10] = 2050;
 
 ################# Knight #########################
 $id = 78;
