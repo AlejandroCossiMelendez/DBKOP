@@ -53,7 +53,7 @@ if (!$account->load($_SESSION['account'])) {
             <td>' . $package_id . '</td>
             <td>' . $points . '</td>
             <td>$' . $price . '</td>
-            <td><div id="paypal-button-container-"></div></td>
+            <td><div id="paypal-button-container-' . $package_id . '"></div></td>
         </tr>';
     }
 
