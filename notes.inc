@@ -8,7 +8,7 @@
 
 <br><br>
 
-[b]✨ Novidades do DBKOP:[/b]<br>
+[b]✨ Novidades do DBKOP TEST:[/b]<br>
 🔹 [b][color=black]Enchant[/color][/b] - De +1 a +10, com Atributos<br>
 🔹 [b][color=black]Sistema de Party[/color][/b] - Experiência em grupo, inclusive PVP<br>
 🔹 [b][color=black]Shenron + Radar[/color][/b] - 100% funcional!<br>
