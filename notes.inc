@@ -1,4 +1,4 @@
-[b]🔥 Dbkop Online está no ar![/b]
+[b]🔥 Dbkop - TEST![/b]
 
 [b][color=black]+| Novidades do Servidor Arena DBKOP[/color][/b]<br>
 🚀 Novos Comandos:  
